@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <%- include('./includes/head',{siteTitle: themeConfig.siteName})%>
+    </head>
+    <body>
+    <%- include('./includes/nav')%>
+        <div class="container col-10" id="main" role="main">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <article class="post">
+                        <h1>
+                            <a itemprop="url" class="post-title" href="<%= post.link%>"><%= post.title%></a>
+                        </h1>
+                        <p id="post-meta">
+                            <i class="fa fa-clock-o"></i><%= post.dateFormat%> |
+                            <i class="fa fa-tags"></i><% post.tags.forEach(function(tag){%>
+                                <a href="<%= tag.link%>"><%= tag.name%></a>
+                                <%})%>|
+                            <i class="fa fa-book-reader"></i><%= post.stats.text%>
+                        </p>
+                        <%
+                        var todaydate=Date.now();
+                        var postdate=Date.parse(post.dateFormat);
+                        var diffDays = (todaydate-postdate)/86400000;
+                        var dasum= parseInt(diffDays);
+                        var warningTextArr = "此文章发表于"; %>
+                        <% if(dasum > 100){ %>
+                            <blockquote class="fa fa-exclamation-triangle warning">
+                                <%- warningTextArr%><strong><span style="color:#f75357">
+                                        <%= dasum %></span></strong> 天前，请注意文章时效
+                            </blockquote>
+                            <% } %>
+                        <div class="post-content" itemprop="articleBody">
+                            <%- post.content %>
+                        </div>
+                         <blockquote>
+                             <p>本文链接：<a style="text-decoration: underline" href="<%= post.link%>"><%= post.link%></a></p>
+                             <p>此文章由<a style="text-decoration: underline" href="https://willisfusu.github.io/">李二先生</a>采用<a style="text-decoration: underline" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可,转载请注明出处。
+                             </p>
+                         </blockquote>
+                    </article>
+                    <ul class="post-near">
+                        <% if (post.prevPost){ %>
+                        <li>上一篇<a href="<%= post.prevPost.link%>"><%= post.prevPost.title%></a> </li>
+                        <%}%>
+                        <% if (post.nextPost){ %>
+                        <li>上一篇<a href="<%= post.nextPost.link%>"><%= post.nextPost.title%></a> </li>
+                        <%}%>
+                    </ul>
+                    <div id="vcomments"></div>
+                        <script>
+                            new Valine({
+                            el: '#vcomments',
+                            appId: '62yofvjrBSK8xn2MoylBkRUJ-MdYXbMMI',
+                            appKey: 'cfVwB8TO3A8o6l4Uo1h6OR9M',
+                            avatar:"retro"
+                        })
+                        </script>
+                </div>
+                <%- include('./includes/sidebar')%>
+            </div>
+        </div>
+        <%- include('./includes/footer')%>
+    </body>
+</html>

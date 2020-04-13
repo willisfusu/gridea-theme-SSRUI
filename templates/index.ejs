@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <%- include('./includes/head',{siteTitle: themeConfig.siteName})%>
+    </head>
+    <body>
+        <%- include('./includes/nav')%>
+        <style type="text/css">
+            #main {
+	            margin-top: 3rem !important;
+	            padding-bottom: 4rem;
+	            text-align: center;
+            }
+        </style>
+        <div id="main">
+            <div id="titles">
+                <h1 id="title"> ... </h1>
+                <h3 id="head"> ... </h3>
+            </div>
+            <div id="items">
+                <a class="text-body" href="<%= themeConfig.domain%>/tag/will-tech">📝技术</a> |
+                <a class="text-body" href="<%= themeConfig.domain%>/tag/will-thinking">🤔想法</a> |
+                <a class="text-body" href="<%= themeConfig.domain%>/tag/will-life">😋日常</a> |
+                <a class="text-body" href="#">📖关于</a>
+            </div>
+<!--            <a class="small" href="https://www.google.com">This is link to Google.</a>-->
+            <div><p>🎊🎊左下角有音乐播放器，是我喜欢的歌🤗😄</p></div>
+        </div>
+        <script src="<%= themeConfig.domain %>/media/title.js" ></script>
+        <script src="<%= themeConfig.domain %>/media/head.js" ></script>
+        <script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
+        <%- include('./includes/footer')%>
+        <%- include('./includes/music-back')%>
+    </body>
+</html>

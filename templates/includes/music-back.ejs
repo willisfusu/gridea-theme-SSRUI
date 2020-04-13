@@ -1,0 +1,22 @@
+<link
+  href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"
+  rel="stylesheet"
+/>
+<div id="aplayer" class="animated fadeInLeft mx-4" style="animation-delay: 0.6s"></div>
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script>
+  var container = document.getElementById("aplayer");
+  var APlayer = new APlayer({
+    container: container,
+    autoplay: true,
+    fixed: true,
+    audio: [
+      {
+        name: "Stay With Me（Cover：Punch/朴灿烈）",
+        artist: "KCJIN锦",
+        url: "/media/bgm.mp3",
+        cover: "/media/cover.jpg"
+      }
+    ]
+  });
+</script>

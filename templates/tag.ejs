@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+        <%- include('./includes/head',{siteTitle: themeConfig.siteName})%>
+    </head>
+    <body>
+    <%- include('./includes/nav')%>
+        <div class="container col-10" id="main">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <%- include('./includes/post-list')%>
+                    <div class="read-more">
+                        <% if (pagination.next) {%>
+                            <a href="<%= pagination.next %>"> 阅读更多 <i class="fa fa-arrow-circle-right"></i></a>
+                        <%}%>
+                    </div>
+                    <div class="index-page">
+                        <%- include('./includes/pagination')%>
+                    </div>
+                </div>
+                <!-- could include sidebar here? -->
+            </div>
+        </div>
+        <%- include('./includes/footer')%>
+    </body>
+</html>

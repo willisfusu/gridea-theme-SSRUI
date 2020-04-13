@@ -1,0 +1,115 @@
+{
+  "name": "SSRUI",
+  "version": "1.0.0",
+  "author": "WeiLI",
+  "repository": "",
+  "customConfig": [
+    {
+      "name": "Valine-id",
+      "label": "appId",
+      "group": "Valine设置",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "Valine-key",
+      "label": "appKey",
+      "group": "Valine设置",
+      "label": "appKey",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "Valine-avatar",
+      "label": "avatar",
+      "group": "Valine设置",
+      "label": "头像类别",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "weibo",
+      "label": "微博",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "zhihu",
+      "label": "知乎",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "facebook",
+      "label": "Facebook",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "telegram",
+      "label": "Telegram",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "dribbble",
+      "label": "Dribbble",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "instagram",
+      "label": "Instagram",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "menu-1",
+      "label": "menu-1",
+      "group": "自定义菜单",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "menu-2",
+      "label": "menu-2",
+      "group": "自定义菜单",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "menu-3",
+      "label": "menu-3",
+      "group": "自定义菜单",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "menu-4",
+      "label": "menu-4",
+      "group": "自定义菜单",
+      "value": "",
+      "type": "input"
+    },
+    {
+      "name": "ga",
+      "label": "跟踪 ID",
+      "group": "谷歌统计",
+      "value": "",
+      "type": "input",
+      "note": "UA-xxxxxxxxx-x"
+    }
+  ]
+}

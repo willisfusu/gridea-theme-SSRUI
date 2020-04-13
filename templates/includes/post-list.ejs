@@ -1,0 +1,16 @@
+<% posts.forEach(function(post, index) { %>
+  <article class="post" itemscope itemtype="http://scheme.org/BlogPosting">
+    <h2 itemprop="name headline">
+      <a itemprop="url" class="post-title" href="<%= post.link%>"><%= post.title%></a>
+    </h2>
+    <p id="post-meta">
+      <i class="fa fa-clock-o"></i>&nbsp;<%= post.dateFormat%> |
+      <i class="fa fa-tags"></i>&nbsp;<% post.tags.forEach(function(tag){%><a href="<%= tag.link%>"><%= tag.name%></a> &nbsp <%})%>|
+      <i class="fa fa-book-reader"></i><%= post.stats.text%>
+    </p>
+    <div class="post-content" itemprop="articleBody">
+      <%- post.abstract %>
+    </div>
+    <hr />
+  </article>
+<% }); %>
